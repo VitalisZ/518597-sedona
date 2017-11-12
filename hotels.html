@@ -9,9 +9,9 @@
 	<header class="main-header">
 		<nav class="main-menu">
 			<a href="" class="main-logo">
-				<img src="img/logo.svg" alt="Citi of Sedona">
+				<img src="img/main-logo.png" alt="Citi of Sedona">
 			</a>
-				<ul class="navigation">
+				<ul class="navigation-item-selected">
 				<li class="navigation-item navigationselected"><a href="info.html" class="navigation-item-link">Информация</a></li>
 				<li class="navigation-item"><a href="photo.html" class="navigation-item-link">Фото и Видео</a></li>
 				<li class="navigation-item"><a href="video.html" class="navigation-item-link">Карта штата</a></li>
@@ -22,8 +22,59 @@
 	<main class="container">
 		<!-- Форма выбора -->
 		<section class="hotels-filter">
+			<h2>Фильтр отелей</h2>
+			<form action="https://echo.htmlacademy.ru">
+				<fieldset>
+					<legend>Инфраструктура:</legend>
+					<ul class="comfort">
+						<li class="comfort-item">
+							<input id="pool" type="checkbox" name="pool" checked>
+							<label for="pool">Бассейн</label>
+						</li>
+						<li class="comfort-item">
+							<input id="parking" type="checkbox" name="parking">
+							<label for="parking">Парковка</label>
+						</li>
+						<li class="comfort-item">
+							<input id="wi-fi" type="checkbox" name="wi-fi">
+							<label for="wi-fi">Wi-fi</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Тип жилья:</legend>
+					<ul class="hotels-type">
+						<li class="hotels-type-item">
+							<input id="hotel" type="checkbox" name="hotel" checked>
+							<label for="hotel">Гостиница</label>
+						</li>
+						<li class="hotels-type-item">
+							<input id="motel" type="checkbox" name="motel" checked>
+							<label for="motel">Мотель</label>
+						</li>
+						<li class="hotels-type-item">
+							<input id="apartments" type="checkbox" name="apartments" checked>
+							<label for="apartments">Апартаменты</label>
+						</li>
+					</ul>
+				</fieldset>
+					<h3>Стоимость в сутки(Р)</h3>
+				<p class="filter-price">
+					от
+					<span class="filter-price-item">0</span>
+					до
+					<span class="filter-price-item">3000</span>
+				</p>
+				<label>
+      				<input type="range" name="filter-price">
+    			</label>
+
+    			<br>
+				<button class="filter-btn" type="submit">Показать</button>
+			</form>
 		</section>
 		<!-- Сортировка -->
+		<h2 class="visually-hidden">Результат поиска</h2>
 		<section class="hotels-results">
 			<h3>Найдено: <span class="hotels-count">3</span></h3>
 			<span>Сортировка:</span>
@@ -39,7 +90,9 @@
 				<!-- 1-й -->
 			<ul class="hotels-item">
 				<li class="hotel-img">
-					<img src="http://placehold.it/100x50" alt="hotels">
+					<p class="hotel-img">	
+					<img src="img/hotel1.jpg" alt="Amara Resort & SPA">
+					</p>
 					<h3 class="hotel-name">Amara Resort & SPA</h3>
 					<p class="hotel-type">Гостиница</p>
 					<p class="hotel-price">от 4000р.</p>
@@ -49,7 +102,9 @@
 				</li>
 				<!-- 2-ой -->
 				<li>
-					<img src="http://placehold.it/100x50" alt="hotels">
+					<p class="hotel-img">
+					<img src="img/hotel2.jpg" alt="Desert Quail Inn">
+					</p>
 					<h3 class="hotel-name">Desert Quail Inn</h3>
 					<p class="hotel-type">Мотель</p>
 					<p class="hotel-price">от 3000р.</p>
@@ -59,7 +114,9 @@
 				</li>
 				<!-- 3-й -->
 				<li>
-					<img src="http://placehold.it/100x50" alt="hotels">
+					<p class="hotel-img">
+					<img src="img/hotel3.jpg" alt="Villas at Poco Diablo">
+					</p>
 					<h3 class="hotel-name">Villas at Poco Diablo</h3>
 					<p class="hotel-type">Апартаменты</p>
 					<p class="hotel-price">от 2000р.</p>
@@ -80,15 +137,15 @@
 		 -->
 		<div class="footer-social">
 			<ul class="social">
-				<li class="social-item"><a href="https://www.google.ru/" class="twit">Twetter</a></li>
-				<li class="social-item"><a href="https://www.google.ru/" class="face">Facebook</a></li>
-				<li class="social-item"><a href="https://www.google.ru/" class="tube">YouTube</a></li>
+				<li class="social-item"><a href="https://www.google.ru/" class="twit" aria-label="Twetter"></a></li>
+				<li class="social-item"><a href="https://www.google.ru/" class="face" aria-label="Facebook"></a></li>
+				<li class="social-item"><a href="https://www.google.ru/" class="tube" aria-label="YouTube"></a></li>
 			</ul>
 		</div>
-		<div class="copyright">
+		<div class="footer-copyright">
 			<span class="website">Website by</span>
-			<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo">
-				<img src="http://placehold.it/50x50" alt="HTML-Academy">
+			<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo" aria-label="Website HTML Academy">
+				<img src="img/logo-htmlacademy.svg" alt="HTML-Academy">
 			</a>
 		</div>
 	</footer>

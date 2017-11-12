@@ -9,24 +9,24 @@
 	<header class="main-header">
 		<nav class="main-menu">
 			<a href="" class="main-logo">
-				<img src="img/logo.svg" alt="Citi of Sedona">
+				<img src="img/main-logo.png" alt="Citi of Sedona">
 			</a>
-				<ul class="navigation">
-				<li><a href="info.html" class="navigation-item">Информация</a></li>
-				<li><a href="photo.html" class="navigation-item">Фото и Видео</a></li>
-				<li><a href="video.html" class="navigation-item">Карта штата</a></li>
-				<li><a href="map.html" class="navigation-item">Гостиницы</a></li>
+				<ul class="navigation-item-selected">
+				<li class="navigation-item navigationselected"><a href="info.html" class="navigation-item-link">Информация</a></li>
+				<li class="navigation-item"><a href="photo.html" class="navigation-item-link">Фото и Видео</a></li>
+				<li class="navigation-item"><a href="video.html" class="navigation-item-link">Карта штата</a></li>
+				<li class="navigation-item"><a href="map.html" class="navigation-item-link">Гостиницы</a></li>
 			</ul>
 		</nav>
 	</header>
 	<!-- Банер -->
 	<main class="container">
 		<!-- Тут будет картинка -->
-		<!-- <h2>Welcom to the Sedona</h2>
-		<h1>Sedona</h1>
-		<h2>"Beacaus the Grand Canyon sucks"</h2> -->
-		<!-- Преимущества города -->
+		<!-- <p>
+			<img src="img/backgrond-image.jpg" alt="sedona">
+		</p> -->
 		<!-- Описание города -->
+		<h2 class="visually-hidden">Описание города</h2>
 		<section class="about">
 			<h3 class="reasons-name">Седона- небольшой городок в Аризоне, заслуживающий большего</h3>
 			<p class="reasons-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
@@ -37,7 +37,7 @@
 					<p class="reasons-text">Седона - не аттракцион дял туристов, там течет своя жизнь</p>	
 				</li>
 				<li class="reasons-item">	
-					<img src="http://placehold.it/100x50" alt="city-photo">
+					<img src="img/city.jpg" alt="city-photo">
 				</li>
 			</ul>
 		<!-- Достопримечательности города -->
@@ -63,7 +63,7 @@
 					<p class="reasons-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 				</li>
 				<li class="reasons-item">
-					<img src="http://placehold.it/100x50" alt="canyon">
+					<img src="img/canyon.jpg" alt="canyon">
 				</li>
 		<!-- Достопримечательности каньона -->
 				<li class="reasons-item">
@@ -91,13 +91,35 @@
 			<button class="booking-form-btn" type="button">Поиск гостиницы в Седоне</button>
 		</section>
 		<!-- Форма Поиска -->
-		<section class="search">
-			
+		<section class="hotels-search">
+			<form class="hotels-search-form" action="https://echo.htmlacademy.ru" method="post">
+				<p class="hotels-search-item">
+					<label for="arrival-date">Дата заезда:</label>
+					<input id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
+					<span class="calendar"></span>
+				</p>
+				<p class="hotels-search-item">
+					<label for="departure-date">Дата выезда:</label>
+					<input id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
+					<span class="calendar"></span>
+				</p>
+				<p class="hotels-search-item">
+					<label for="people-btn">Взрослые:</label>
+					<button id="people-btn" class="people-btn adults-minus" type="submit">-</button>
+					<span class="adults">2</span>
+					<button class="people-btn adults-plus" type="submit">+</button>
+					<label for="people-btn">Дети:</label>
+					<button class="people-btn adults-minus" type="submit">-</button>
+					<span class="children">0</span>
+					<button class="people-btn adults-plus" type="submit">+</button>
+				</p>
+				<button class="find-btn" type="submit">Найти</button>
+			</form>	
 		</section>
 		<!-- Карта Аризоны-->
 		<section class="map">
 			<h2 class="visually-hidden">Карта штата</h2>
-			<img src="http://placehold.it/300x150" alt="map">
+			<img src="img/map.png" alt="Карта штата Аризона">
 		</section>
 	</main>
 	<footer class="main-footer">
@@ -108,15 +130,15 @@
 		</div>
 		<div class="footer-social">
 			<ul class="social">
-				<li class="social-item"><a href="https://www.google.ru/" class="twit">Twetter</a></li>
-				<li class="social-item"><a href="https://www.google.ru/" class="face">Facebook</a></li>
-				<li class="social-item"><a href="https://www.google.ru/" class="tube">YouTube</a></li>
+				<li class="social-item"><a href="https://www.google.ru/" class="twit" aria-label="Twetter"></a></li>
+				<li class="social-item"><a href="https://www.google.ru/" class="face" aria-label="Facebook"></a></li>
+				<li class="social-item"><a href="https://www.google.ru/" class="tube" aria-label="YouTube"></a></li>
 			</ul>
 		</div>
-		<div class="copyright">
+		<div class="footer-copyright">
 			<span class="website">Website by</span>
-			<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo">
-				<img src="http://placehold.it/50x50" alt="HTML-Academy">
+			<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo" aria-label="Website HTML Academy">
+				<img src="img/logo-htmlacademy.svg" alt="HTML-Academy">
 			</a>
 		</div>
 	</footer>
