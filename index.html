@@ -8,14 +8,22 @@
   	<!-- Меню -->
 	<header class="main-header">
 		<nav class="main-menu">
-			<a href="" class="main-logo">
+			<a href="index.html" class="main-logo">
 				<img src="img/main-logo.png" alt="Citi of Sedona">
 			</a>
-				<ul class="navigation-item-selected">
-				<li class="navigation-item navigationselected"><a href="info.html" class="navigation-item-link">Информация</a></li>
-				<li class="navigation-item"><a href="photo.html" class="navigation-item-link">Фото и Видео</a></li>
-				<li class="navigation-item"><a href="video.html" class="navigation-item-link">Карта штата</a></li>
-				<li class="navigation-item"><a href="map.html" class="navigation-item-link">Гостиницы</a></li>
+			<ul class="navigation">
+				<li class="navigation-item-selected">
+					<a href="info.html" class="navigation-item-link">Информация</a>
+				</li>
+				<li class="navigation-item">
+					<a href="photo.html" class="navigation-item-link">Фото и Видео</a>
+				</li>
+				<li class="navigation-item">
+					<a href="video.html" class="navigation-item-link">Карта штата</a>
+				</li>
+				<li class="navigation-item">
+					<a href="hotels.html" class="navigation-item-link">Гостиницы</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -34,7 +42,7 @@
 				<li class="reasons-item">
 					<h3 class="reasons-name">Настоящий городок</h3>
 					<p class="reasons-number">-№1-</p>
-					<p class="reasons-text">Седона - не аттракцион дял туристов, там течет своя жизнь</p>	
+					<p class="reasons-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>	
 				</li>
 				<li class="reasons-item">	
 					<img src="img/city.jpg" alt="city-photo">
@@ -43,16 +51,16 @@
 		<!-- Достопримечательности города -->
 			<ul class="features-list">
 				<li class="features-item">
-					<h3 class="reasons-apartments">Жилье</h3>
-					<p class="reasons-apartments-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+					<h3 class="features-text">Жилье</h3>
+					<p class="features-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 				</li>
 				<li class="features-item">
-					<h3 class="reasons-food">Еда</h3>
-					<p class="reasons-food-text">Всегда заказываету фирменный бургер, вы не разочаруетесь!</p>
+					<h3 class="features-text">Еда</h3>
+					<p class="features-text">Всегда заказываету фирменный бургер, вы не разочаруетесь!</p>
 				</li>
 				<li class="features-item">	
-					<h3 class="reasons-souvenir">Сувениры</h3>
-					<p class="reasons-souvenir-text">Не только китайского но и местного производства!</p>
+					<h3 class="features-text">Сувениры</h3>
+					<p class="features-text">Не только китайского но и местного производства!</p>
 				</li>
 			</ul>
 		<!-- Мост -->
@@ -94,21 +102,21 @@
 		<section class="hotels-search">
 			<form class="hotels-search-form" action="https://echo.htmlacademy.ru" method="post">
 				<p class="hotels-search-item">
-					<label for="arrival-date">Дата заезда:</label>
-					<input id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
-					<span class="calendar"></span>
+					<label class="hotels-input" for="arrival-date">Дата заезда:</label>
+					<input class="date-input" id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
+					<button class="calendar" aria-label="Календарь">c</button>
 				</p>
 				<p class="hotels-search-item">
-					<label for="departure-date">Дата выезда:</label>
-					<input id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
-					<span class="calendar"></span>
+					<label class="hotels-input" for="departure-date">Дата выезда:</label>
+					<input class="date-input" id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
+					<button class="calendar" aria-label="Календарь">c</button>
 				</p>
 				<p class="hotels-search-item">
-					<label for="people-btn">Взрослые:</label>
+					<label class="hotels-input" for="people-btn">Взрослые:</label>
 					<button id="people-btn" class="people-btn adults-minus" type="submit">-</button>
 					<span class="adults">2</span>
 					<button class="people-btn adults-plus" type="submit">+</button>
-					<label for="people-btn">Дети:</label>
+					<label class="hotels-input" for="people-btn">Дети:</label>
 					<button class="people-btn adults-minus" type="submit">-</button>
 					<span class="children">0</span>
 					<button class="people-btn adults-plus" type="submit">+</button>
@@ -119,20 +127,26 @@
 		<!-- Карта Аризоны-->
 		<section class="map">
 			<h2 class="visually-hidden">Карта штата</h2>
-			<img src="img/map.png" alt="Карта штата Аризона">
+			<img src="img/map.png" alt="Arizona State map">
 		</section>
 	</main>
 	<footer class="main-footer">
 		<!-- Контакты -->
 		<h2 class="visually-hidden">Контакты</h2>
-		<div class="footer-item">
+		<div class="footer-hashtag">
 			<p class="hashtag">#Visitsedona</p>
 		</div>
 		<div class="footer-social">
 			<ul class="social">
-				<li class="social-item"><a href="https://www.google.ru/" class="twit" aria-label="Twetter"></a></li>
-				<li class="social-item"><a href="https://www.google.ru/" class="face" aria-label="Facebook"></a></li>
-				<li class="social-item"><a href="https://www.google.ru/" class="tube" aria-label="YouTube"></a></li>
+				<li class="social-item">
+					<a href="https://www.google.ru/" class="twitter" aria-label="twitter"></a>
+				</li>
+				<li class="social-item">
+					<a href="https://www.google.ru/" class="facebook" aria-label="facebook"></a>
+				</li>
+				<li class="social-item">
+					<a href="https://www.google.ru/" class="youtube" aria-label="youtube"></a>
+				</li>
 			</ul>
 		</div>
 		<div class="footer-copyright">
