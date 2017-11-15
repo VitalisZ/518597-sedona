@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
   	<!-- Меню -->
@@ -12,16 +15,16 @@
 				<img src="img/main-logo.png" alt="Citi of Sedona">
 			</a>
 			<ul class="navigation">
-				<li class="navigation-item-selected">
+				<li class="navigation-item active-info">
 					<a href="info.html" class="navigation-item-link">Информация</a>
 				</li>
-				<li class="navigation-item">
+				<li class="navigation-item active-photo">
 					<a href="photo.html" class="navigation-item-link">Фото и Видео</a>
 				</li>
-				<li class="navigation-item">
+				<li class="navigation-item active-map">
 					<a href="video.html" class="navigation-item-link">Карта штата</a>
 				</li>
-				<li class="navigation-item">
+				<li class="navigation-item active-hotel">
 					<a href="hotels.html" class="navigation-item-link">Гостиницы</a>
 				</li>
 			</ul>
@@ -30,9 +33,11 @@
 	<!-- Банер -->
 	<main class="container">
 		<!-- Тут будет картинка -->
-		<!-- <p>
-			<img src="img/backgrond-image.jpg" alt="sedona">
-		</p> -->
+		<div class="main-image">	
+			<p>
+				<img src="img/background-image.jpg" width="1200" height="773" alt="sedona">
+			</p>
+		</div>
 		<!-- Описание города -->
 		<h2 class="visually-hidden">Описание города</h2>
 		<section class="about">
@@ -44,22 +49,22 @@
 					<p class="reasons-number">-№1-</p>
 					<p class="reasons-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>	
 				</li>
-				<li class="reasons-item">	
-					<img src="img/city.jpg" alt="city-photo">
+				<li class="reasons-img">	
+					<img src="img/city.jpg" width="800" height="256" alt="city-photo">
 				</li>
 			</ul>
 		<!-- Достопримечательности города -->
 			<ul class="features-list">
 				<li class="features-item">
-					<h3 class="features-text">Жилье</h3>
+					<h3 class="features-caption">Жилье</h3>
 					<p class="features-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 				</li>
 				<li class="features-item">
-					<h3 class="features-text">Еда</h3>
+					<h3 class="features-caption">Еда</h3>
 					<p class="features-text">Всегда заказываету фирменный бургер, вы не разочаруетесь!</p>
 				</li>
 				<li class="features-item">	
-					<h3 class="features-text">Сувениры</h3>
+					<h3 class="features-caption">Сувениры</h3>
 					<p class="features-text">Не только китайского но и местного производства!</p>
 				</li>
 			</ul>
@@ -70,21 +75,21 @@
 					<p class="reasons-number">-№2-</p>
 					<p class="reasons-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 				</li>
-				<li class="reasons-item">
-					<img src="img/canyon.jpg" alt="canyon">
+				<li class="reasons-img">
+					<img src="img/canyon.jpg" width="800" height="256" alt="canyon">
 				</li>
 		<!-- Достопримечательности каньона -->
-				<li class="reasons-item">
+				<li class="reasons-items">
 					<h3 class="reasons-name">Небольшая площадь</h3>
 					<p class="reasons-number">-№3-</p>
 					<p class="reasons-text">Все достопримечательности находятся близко</p>
 				</li>
-				<li class="reasons-item">
+				<li class="reasons-items">
 					<h3 class="reasons-name">Красивая дорога</h3>
 					<p class="reasons-number">-№4-</p>
 					<p class="reasons-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 				</li>
-				<li class="reasons-item">
+				<li class="reasons-items">
 					<h3 class="reasons-name">Мало туристов</h3>
 					<p class="reasons-number">-№5-</p>
 					<p class="reasons-text">Большинство едет в Гранд Каньон и толпится там</p>
@@ -92,8 +97,7 @@
 			</ul>
 		</section>
 		<!-- Выбор гостиницы -->
-		<section class="booking">
-			<h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+		<section class="booking">			
 			<h2 class="booking-interesting">Заинтересовались?</h2>
 			<p class="booking-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 			<button class="booking-form-btn" type="button">Поиск гостиницы в Седоне</button>
@@ -102,24 +106,38 @@
 		<section class="hotels-search">
 			<form class="hotels-search-form" action="https://echo.htmlacademy.ru" method="post">
 				<p class="hotels-search-item">
-					<label class="hotels-input" for="arrival-date">Дата заезда:</label>
+					<label class="hotels-date" for="arrival-date">Дата заезда:</label>
 					<input class="date-input" id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
-					<button class="calendar" aria-label="Календарь">c</button>
+					<button class="calendar" aria-label="Календарь">
+						<img src="img/calendar.svg" alt="calendar">
+					</button>
 				</p>
 				<p class="hotels-search-item">
-					<label class="hotels-input" for="departure-date">Дата выезда:</label>
+					<label class="hotels-date" for="departure-date">Дата выезда:</label>
 					<input class="date-input" id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
-					<button class="calendar" aria-label="Календарь">c</button>
+					<button class="calendar" aria-label="Календарь" type="button">
+						<img src="img/calendar.svg" alt="calendar">
+					</button>
 				</p>
 				<p class="hotels-search-item">
 					<label class="hotels-input" for="people-btn">Взрослые:</label>
-					<button id="people-btn" class="people-btn adults-minus" type="submit">-</button>
-					<span class="adults">2</span>
-					<button class="people-btn adults-plus" type="submit">+</button>
+					<button id="people-btn" class="people-btn adults-minus" type="button">
+						<img src="img/minus.png" alt="minus">
+					</button>
+					<input type="text" class="adults" placeholder="2">
+					<!-- <span class="adults">2</span> -->
+					<button class="people-btn adults-plus" type="button">
+						<img src="img/plus.png" alt="plus">
+					</button>
 					<label class="hotels-input" for="people-btn">Дети:</label>
-					<button class="people-btn adults-minus" type="submit">-</button>
-					<span class="children">0</span>
-					<button class="people-btn adults-plus" type="submit">+</button>
+					<button class="people-btn adults-minus" type="button">
+						<img src="img/minus.png" alt="minus">
+					</button>
+					<input type="text" class="children" placeholder="0">
+					<!-- <span class="children">0</span> -->
+					<button class="people-btn adults-plus" type="button">
+						<img src="img/plus.png" alt="plus">
+					</button>
 				</p>
 				<button class="find-btn" type="submit">Найти</button>
 			</form>	
@@ -127,7 +145,7 @@
 		<!-- Карта Аризоны-->
 		<section class="map">
 			<h2 class="visually-hidden">Карта штата</h2>
-			<img src="img/map.png" alt="Arizona State map">
+			<img src="img/map.png" width="1280" height="747" alt="Arizona State map">
 		</section>
 	</main>
 	<footer class="main-footer">
@@ -139,13 +157,19 @@
 		<div class="footer-social">
 			<ul class="social">
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="twitter" aria-label="twitter"></a>
+					<a href="https://www.google.ru/" class="twitter" aria-label="twitter">
+						<img src="img/twitter.svg" alt="twitter">
+					</a>
 				</li>
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="facebook" aria-label="facebook"></a>
+					<a href="https://www.google.ru/" class="facebook" aria-label="facebook">
+						<img src="img/fb-icon.svg" alt="facebook">
+					</a>
 				</li>
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="youtube" aria-label="youtube"></a>
+					<a href="https://www.google.ru/" class="youtube" aria-label="youtube">
+						<img src="img/youtube.svg" alt="youtube">
+					</a>
 				</li>
 			</ul>
 		</div>

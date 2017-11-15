@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- <link href="css/normalize.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
   	<!-- Меню -->
@@ -12,16 +15,16 @@
 				<img src="img/main-logo.png" alt="Citi of Sedona">
 			</a>
 			<ul class="navigation">
-				<li class="navigation-item-selected">
+				<li class="navigation-item active-info">
 					<a href="info.html" class="navigation-item-link">Информация</a>
 				</li>
-				<li class="navigation-item">
+				<li class="navigation-item active-photo">
 					<a href="photo.html" class="navigation-item-link">Фото и Видео</a>
 				</li>
-				<li class="navigation-item">
+				<li class="navigation-item active-map">
 					<a href="video.html" class="navigation-item-link">Карта штата</a>
 				</li>
-				<li class="navigation-item">
+				<li class="navigation-item active-hotel">
 					<a href="hotels.html" class="navigation-item-link">Гостиницы</a>
 				</li>
 			</ul>
@@ -30,17 +33,17 @@
 	<main class="container">
 		<!-- Форма выбора -->
 		<section class="hotels-filter">
-			<h2>Фильтр отелей</h2>
+			<h2 class="visually-hidden">Фильтр отелей</h2>
 			<form action="https://echo.htmlacademy.ru" method="post">
 				<fieldset class="filter-check">
 					<legend class="comfort-check">Инфраструктура:</legend>
 					<ul class="comfort">
 						<li class="comfort-item">
-							<input id="pool" type="checkbox" name="pool" checked>
+							<input class="" id="pool" type="checkbox" name="pool" checked>
 							<label class="check-btn" for="pool">Бассейн</label>
 						</li>
 						<li class="comfort-item">
-							<input id="parking" type="checkbox" name="parking">
+							<input class="" id="parking" type="checkbox" name="parking">
 							<label class="check-btn" for="parking">Парковка</label>
 						</li>
 						<li class="comfort-item">
@@ -50,7 +53,7 @@
 					</ul>
 				</fieldset>
 				<fieldset class="filter-check">
-					<legend class="hotels-type-check">Тип жилья:</legend>
+					<legend class="comfort-check">Тип жилья:</legend>
 					<ul class="hotels-type">
 						<li class="hotels-type-item">
 							<input id="hotel" type="checkbox" name="hotel" checked>
@@ -81,7 +84,7 @@
 		</section>
 		<!-- Сортировка -->
 		<section class="hotels-results">
-			<h2 class="visually-hidden">Результаты поиска</h2>
+			<h2 class="visually-hidden">Список гостиниц</h2>
 			<h3>Найдено: <span class="hotels-count">3</span></h3>
 			<span>Сортировка:</span>
 			<ul class="hotels-sorting-parameters">
@@ -97,10 +100,11 @@
 				</li>
 				<!-- стрелки справа -->
 			</ul>
+			<button class="up" type="submit">вверх</button>
+			<button class="down" type="submit">вниз</button>
 		<!-- Список гостиниц -->
-		<h2 class="visually-hidden">Список гостиниц</h2>
 				<!-- 1-й -->
-			<ul class="hotels-item">
+			<ul class="hotels-list">
 				<li class="hotel-item-li">
 					<p class="hotel-img">	
 						<img src="img/hotel1.jpg" alt="Amara Resort & SPA">
@@ -111,7 +115,7 @@
 					<a class="bottom-info" href="info.html">Подробнее</a>
 					<button class="hotel-btn-booking" type="button">Забронировать</button>
 					<p class="rating">Рейтинг:8.5</p>
-					<p class="star-rating" tabindex="0" aria-label="hotel rating">звезды</p>
+					<p class="star-rating" tabindex="0" aria-label="hotel rating"></p>
 				</li>
 				<!-- 2-ой -->
 				<li class="hotel-item-li">
@@ -124,7 +128,7 @@
 					<a class="bottom-info" href="info.html">Подробнее</a>
 					<button class="hotel-btn-booking" type="button">Забронировать</button>
 					<p class="rating">Рейтинг:8.9</p>
-					<p class="star-rating" tabindex="0" aria-label="hotel rating">звезды</p>
+					<p class="star-rating" tabindex="0" aria-label="hotel rating"></p>
 				</li>
 				<!-- 3-й -->
 				<li class="hotel-item-li">
@@ -137,7 +141,7 @@
 					<a class="bottom-info" href="info.html">Подробнее</a>
 					<button class="hotel-btn-booking" type="button">Забронировать</button>
 					<p class="rating">Рейтинг:9.2</p>
-					<p class="star-rating" tabindex="0" aria-label="hotel rating">звезды</p>
+					<p class="star-rating" tabindex="0" aria-label="hotel rating"></p>
 				</li>
 			</ul>				
 		</section>
@@ -151,13 +155,19 @@
 		<div class="footer-social">
 			<ul class="social">
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="twitter" aria-label="twitter"></a>
+					<a href="https://www.google.ru/" class="twitter" aria-label="twitter">
+						<img src="img/twitter.svg" alt="twitter">
+					</a>
 				</li>
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="facebook" aria-label="facebook"></a>
+					<a href="https://www.google.ru/" class="facebook" aria-label="facebook">
+						<img src="img/fb-icon.svg" alt="facebook">
+					</a>
 				</li>
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="youtube" aria-label="youtube"></a>
+					<a href="https://www.google.ru/" class="youtube" aria-label="youtube">
+						<img src="img/youtube.svg" alt="youtube">
+					</a>
 				</li>
 			</ul>
 		</div>
