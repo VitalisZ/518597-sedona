@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <!-- <link href="css/normalize.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -12,19 +12,19 @@
 	<header class="main-header">
 		<nav class="main-menu">
 			<a href="index.html" class="main-logo">
-				<img src="img/main-logo.png" alt="Citi of Sedona">
+				<img src="img/main-logo.png" alt="City of Sedona">
 			</a>
 			<ul class="navigation">
-				<li class="navigation-item active-info">
+				<li class="navigation-item">
 					<a href="info.html" class="navigation-item-link">Информация</a>
 				</li>
-				<li class="navigation-item active-photo">
+				<li class="navigation-item">
 					<a href="photo.html" class="navigation-item-link">Фото и Видео</a>
 				</li>
-				<li class="navigation-item active-map">
+				<li class="navigation-item">
 					<a href="video.html" class="navigation-item-link">Карта штата</a>
 				</li>
-				<li class="navigation-item active-hotel">
+				<li class="navigation-item active-item">
 					<a href="hotels.html" class="navigation-item-link">Гостиницы</a>
 				</li>
 			</ul>
@@ -36,40 +36,40 @@
 			<h2 class="visually-hidden">Фильтр отелей</h2>
 			<form action="https://echo.htmlacademy.ru" method="post">
 				<fieldset class="filter-check">
-					<legend class="comfort-check">Инфраструктура:</legend>
+					<legend class="filter-form-group legend">Инфраструктура:</legend>
 					<ul class="comfort">
 						<li class="comfort-item">
-							<input class="" id="pool" type="checkbox" name="pool" checked>
-							<label class="check-btn" for="pool">Бассейн</label>
+							<input class="check-item" id="pool" type="checkbox" name="pool" checked>
+							<label class="check-name" for="pool">Бассейн</label>
 						</li>
 						<li class="comfort-item">
-							<input class="" id="parking" type="checkbox" name="parking">
-							<label class="check-btn" for="parking">Парковка</label>
+							<input class="check-item" id="parking" type="checkbox" name="parking">
+							<label class="check-name" for="parking">Парковка</label>
 						</li>
 						<li class="comfort-item">
-							<input id="wi-fi" type="checkbox" name="wi-fi">
-							<label class="check-btn" for="wi-fi">Wi-fi</label>
+							<input class="check-item" id="wi-fi" type="checkbox" name="wi-fi">
+							<label class="check-name" for="wi-fi">Wi-fi</label>
 						</li>
 					</ul>
 				</fieldset>
-				<fieldset class="filter-check">
+				<fieldset class="filter-form-group legend">
 					<legend class="comfort-check">Тип жилья:</legend>
 					<ul class="hotels-type">
 						<li class="hotels-type-item">
-							<input id="hotel" type="checkbox" name="hotel" checked>
-							<label class="check-btn" for="hotel">Гостиница</label>
+							<input class="check-item" id="hotel" type="checkbox" name="hotel" checked>
+							<label class="check-name" for="hotel">Гостиница</label>
 						</li>
 						<li class="hotels-type-item">
-							<input id="motel" type="checkbox" name="motel" checked>
-							<label class="check-btn" for="motel">Мотель</label>
+							<input class="check-item" id="motel" type="checkbox" name="motel" checked>
+							<label class="check-name" for="motel">Мотель</label>
 						</li>
 						<li class="hotels-type-item">
-							<input id="apartments" type="checkbox" name="apartments" checked>
-							<label class="check-btn" for="apartments">Апартаменты</label>
+							<input class="check-item" id="apartments" type="checkbox" name="apartments" checked>
+							<label class="check-name" for="apartments">Апартаменты</label>
 						</li>
 					</ul>
 				</fieldset>
-				<fieldset class="filter-check">
+				<fieldset class="filter-form-group legend">
 					<legend class="price-of-day">Стоимость в сутки(Р)</legend>
 					<p class="filter-price">
 						от
@@ -89,58 +89,59 @@
 			<span>Сортировка:</span>
 			<ul class="hotels-sorting-parameters">
 				<!-- 2 класса у цены -->
-				<li class="hotel-sorting sorting-selected">
-					<button class="hotel-sorting-btn" type="button">По цене</button>
+				<li class="hotel-sorting sorting-active">
+					<a href="#" class="hotel-sorting-btn">По цене</a>
 				</li> 
 				<li class="hotels-sorting">
-					<button class="hotel-sorting-btn" type="button">По типу</button>
+					<a href="#" class="hotel-sorting-btn">По типу</a>
 				</li>
 				<li class="hotels-sorting">
-					<button class="hotel-sorting-btn" type="button">По рейтингу</button>
+					<a href="#" class="hotel-sorting-btn">По рейтингу</a>
 				</li>
-				<!-- стрелки справа -->
+				<!-- стрелки справа  #231F20-->
 			</ul>
-			<button class="up" type="submit">вверх</button>
-			<button class="down" type="submit">вниз</button>
+			<a href="#" class="up"></a>
+			<a href="#" class="down"></a>
 		<!-- Список гостиниц -->
 				<!-- 1-й -->
 			<ul class="hotels-list">
-				<li class="hotel-item-li">
+				<li class="hotel-item">
 					<p class="hotel-img">	
 						<img src="img/hotel1.jpg" alt="Amara Resort & SPA">
 					</p>
-					<h3 class="hotel-name">Amara Resort & SPA</h3>
+					<!-- <h3 class="hotel-name">Amara Resort & SPA</h3> -->
+					<a href="#" class="hotel-name">Amara Resort & SPA</a>
 					<p class="hotel-type">Гостиница</p>
 					<p class="hotel-price">от 4000р.</p>
 					<a class="bottom-info" href="info.html">Подробнее</a>
 					<button class="hotel-btn-booking" type="button">Забронировать</button>
-					<p class="rating">Рейтинг:8.5</p>
+					<p class="rating">Рейтинг: 8.5</p>
 					<p class="star-rating" tabindex="0" aria-label="hotel rating"></p>
 				</li>
 				<!-- 2-ой -->
-				<li class="hotel-item-li">
+				<li class="hotel-item">
 					<p class="hotel-img">
 						<img src="img/hotel2.jpg" alt="Desert Quail Inn">
 					</p>
-					<h3 class="hotel-name">Desert Quail Inn</h3>
+					<a href="#" class="hotel-name">Desert Quail Inn</a>
 					<p class="hotel-type">Мотель</p>
 					<p class="hotel-price">от 3000р.</p>
 					<a class="bottom-info" href="info.html">Подробнее</a>
 					<button class="hotel-btn-booking" type="button">Забронировать</button>
-					<p class="rating">Рейтинг:8.9</p>
+					<p class="rating">Рейтинг: 8.9</p>
 					<p class="star-rating" tabindex="0" aria-label="hotel rating"></p>
 				</li>
 				<!-- 3-й -->
-				<li class="hotel-item-li">
+				<li class="hotel-item">
 					<p class="hotel-img">
 						<img src="img/hotel3.jpg" alt="Villas at Poco Diablo">
 					</p>
-					<h3 class="hotel-name">Villas at Poco Diablo</h3>
+					<a href="#" class="hotel-name">Villas at Poco Diablo</a>
 					<p class="hotel-type">Апартаменты</p>
 					<p class="hotel-price">от 2000р.</p>
 					<a class="bottom-info" href="info.html">Подробнее</a>
 					<button class="hotel-btn-booking" type="button">Забронировать</button>
-					<p class="rating">Рейтинг:9.2</p>
+					<p class="rating">Рейтинг: 9.2</p>
 					<p class="star-rating" tabindex="0" aria-label="hotel rating"></p>
 				</li>
 			</ul>				
@@ -155,19 +156,13 @@
 		<div class="footer-social">
 			<ul class="social">
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="twitter" aria-label="twitter">
-						<img src="img/twitter.svg" alt="twitter">
-					</a>
+					<a href="https://www.google.ru/" class="twitter" aria-label="twitter"></a>
 				</li>
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="facebook" aria-label="facebook">
-						<img src="img/fb-icon.svg" alt="facebook">
-					</a>
+					<a href="https://www.google.ru/" class="facebook" aria-label="facebook"></a>
 				</li>
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="youtube" aria-label="youtube">
-						<img src="img/youtube.svg" alt="youtube">
-					</a>
+					<a href="https://www.google.ru/" class="youtube" aria-label="youtube"></a>
 				</li>
 			</ul>
 		</div>

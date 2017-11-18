@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -12,19 +12,19 @@
 	<header class="main-header">
 		<nav class="main-menu">
 			<a href="index.html" class="main-logo">
-				<img src="img/main-logo.png" alt="Citi of Sedona">
+				<img src="img/main-logo.png" alt="City of Sedona">
 			</a>
 			<ul class="navigation">
-				<li class="navigation-item active-info">
+				<li class="navigation-item">
 					<a href="info.html" class="navigation-item-link">Информация</a>
 				</li>
-				<li class="navigation-item active-photo">
+				<li class="navigation-item">
 					<a href="photo.html" class="navigation-item-link">Фото и Видео</a>
 				</li>
-				<li class="navigation-item active-map">
+				<li class="navigation-item">
 					<a href="video.html" class="navigation-item-link">Карта штата</a>
 				</li>
-				<li class="navigation-item active-hotel">
+				<li class="navigation-item">
 					<a href="hotels.html" class="navigation-item-link">Гостиницы</a>
 				</li>
 			</ul>
@@ -34,15 +34,13 @@
 	<main class="container">
 		<!-- Тут будет картинка -->
 		<div class="main-image">	
-			<p>
 				<img src="img/background-image.jpg" width="1200" height="773" alt="sedona">
-			</p>
 		</div>
 		<!-- Описание города -->
 		<h2 class="visually-hidden">Описание города</h2>
 		<section class="about">
-			<h3 class="reasons-name">Седона- небольшой городок в Аризоне, заслуживающий большего</h3>
-			<p class="reasons-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
+			<h3 class="reasons-city">Седона- небольшой городок в Аризоне, заслуживающий большего</h3>
+			<p class="reasons-city-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
 			<ul class="reasons-list">
 				<li class="reasons-item">
 					<h3 class="reasons-name">Настоящий городок</h3>
@@ -108,36 +106,24 @@
 				<p class="hotels-search-item">
 					<label class="hotels-date" for="arrival-date">Дата заезда:</label>
 					<input class="date-input" id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
-					<button class="calendar" aria-label="Календарь">
-						<img src="img/calendar.svg" alt="calendar">
-					</button>
+					<button class="calendar" aria-label="Календарь"></button>
 				</p>
 				<p class="hotels-search-item">
 					<label class="hotels-date" for="departure-date">Дата выезда:</label>
 					<input class="date-input" id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
-					<button class="calendar" aria-label="Календарь" type="button">
-						<img src="img/calendar.svg" alt="calendar">
-					</button>
+					<button class="calendar" aria-label="Календарь" type="button"></button>
 				</p>
 				<p class="hotels-search-item">
-					<label class="hotels-input" for="people-btn">Взрослые:</label>
-					<button id="people-btn" class="people-btn adults-minus" type="button">
-						<img src="img/minus.png" alt="minus">
-					</button>
+					<label class="hotels-form" for="people-btn">Взрослые:</label>
+					<button id="people-btn" class="people-btn adults-minus" type="button"></button>
 					<input type="text" class="adults" placeholder="2">
 					<!-- <span class="adults">2</span> -->
-					<button class="people-btn adults-plus" type="button">
-						<img src="img/plus.png" alt="plus">
-					</button>
-					<label class="hotels-input" for="people-btn">Дети:</label>
-					<button class="people-btn adults-minus" type="button">
-						<img src="img/minus.png" alt="minus">
-					</button>
+					<button class="people-btn adults-plus" type="button"></button>
+					<label class="hotels-form" for="people-btn">Дети:</label>
+					<button class="people-btn adults-minus" type="button"></button>
 					<input type="text" class="children" placeholder="0">
 					<!-- <span class="children">0</span> -->
-					<button class="people-btn adults-plus" type="button">
-						<img src="img/plus.png" alt="plus">
-					</button>
+					<button class="people-btn adults-plus" type="button"></button>
 				</p>
 				<button class="find-btn" type="submit">Найти</button>
 			</form>	
@@ -157,19 +143,13 @@
 		<div class="footer-social">
 			<ul class="social">
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="twitter" aria-label="twitter">
-						<img src="img/twitter.svg" alt="twitter">
-					</a>
+					<a href="https://www.google.ru/" class="twitter" aria-label="twitter"></a>
 				</li>
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="facebook" aria-label="facebook">
-						<img src="img/fb-icon.svg" alt="facebook">
-					</a>
+					<a href="https://www.google.ru/" class="facebook" aria-label="facebook"></a>
 				</li>
 				<li class="social-item">
-					<a href="https://www.google.ru/" class="youtube" aria-label="youtube">
-						<img src="img/youtube.svg" alt="youtube">
-					</a>
+					<a href="https://www.google.ru/" class="youtube" aria-label="youtube"></a>
 				</li>
 			</ul>
 		</div>
