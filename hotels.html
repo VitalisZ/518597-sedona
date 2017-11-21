@@ -12,7 +12,7 @@
 	<header class="main-header">
 		<nav class="main-menu">
 			<a href="index.html" class="main-logo">
-				<img src="img/main-logo.png" alt="City of Sedona">
+				<img src="img/main-logo.png" width="138" height="70" alt="City of Sedona">
 			</a>
 			<ul class="navigation">
 				<li class="navigation-item">
@@ -24,7 +24,7 @@
 				<li class="navigation-item">
 					<a href="video.html" class="navigation-item-link">Карта штата</a>
 				</li>
-				<li class="navigation-item active-item">
+				<li class="navigation-item navigation-active-item">
 					<a href="hotels.html" class="navigation-item-link">Гостиницы</a>
 				</li>
 			</ul>
@@ -34,9 +34,9 @@
 		<!-- Форма выбора -->
 		<section class="hotels-filter">
 			<h2 class="visually-hidden">Фильтр отелей</h2>
-			<form action="https://echo.htmlacademy.ru" method="post">
-				<fieldset class="filter-check">
-					<legend class="filter-form-group legend">Инфраструктура:</legend>
+			<form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
+				<fieldset class="filter-form-group">
+					<legend class="comfort-check">Инфраструктура:</legend>
 					<ul class="comfort">
 						<li class="comfort-item">
 							<input class="check-item" id="pool" type="checkbox" name="pool" checked>
@@ -52,7 +52,7 @@
 						</li>
 					</ul>
 				</fieldset>
-				<fieldset class="filter-form-group legend">
+				<fieldset class="filter-form-group">
 					<legend class="comfort-check">Тип жилья:</legend>
 					<ul class="hotels-type">
 						<li class="hotels-type-item">
@@ -69,7 +69,7 @@
 						</li>
 					</ul>
 				</fieldset>
-				<fieldset class="filter-form-group legend">
+				<fieldset class="filter-form-group">
 					<legend class="price-of-day">Стоимость в сутки(Р)</legend>
 					<p class="filter-price">
 						от
@@ -100,8 +100,8 @@
 				</li>
 				<!-- стрелки справа  #231F20-->
 			</ul>
-			<a href="#" class="up"></a>
-			<a href="#" class="down"></a>
+			<a href="#" class="sort-up"></a>
+			<a href="#" class="sort-down"></a>
 		<!-- Список гостиниц -->
 				<!-- 1-й -->
 			<ul class="hotels-list">
@@ -109,40 +109,52 @@
 					<p class="hotel-img">	
 						<img src="img/hotel1.jpg" alt="Amara Resort & SPA">
 					</p>
-					<!-- <h3 class="hotel-name">Amara Resort & SPA</h3> -->
-					<a href="#" class="hotel-name">Amara Resort & SPA</a>
+					<h3>
+						<a href="#" class="hotel-name">Amara Resort & SPA</a>
+					</h3>
+					<!-- <a href="#" class="hotel-name">Amara Resort & SPA</a> -->
 					<p class="hotel-type">Гостиница</p>
 					<p class="hotel-price">от 4000р.</p>
-					<a class="bottom-info" href="info.html">Подробнее</a>
+					<a class="hotel-more-info" href="info.html">Подробнее</a>
 					<button class="hotel-btn-booking" type="button">Забронировать</button>
 					<p class="rating">Рейтинг: 8.5</p>
-					<p class="star-rating" tabindex="0" aria-label="hotel rating"></p>
+					<p class="star-rating" tabindex="0" aria-label="hotel rating">
+						<span class="star-item"></span>
+					</p>
 				</li>
 				<!-- 2-ой -->
 				<li class="hotel-item">
 					<p class="hotel-img">
 						<img src="img/hotel2.jpg" alt="Desert Quail Inn">
 					</p>
-					<a href="#" class="hotel-name">Desert Quail Inn</a>
+					<h3>
+						<a href="#" class="hotel-name">Desert Quail Inn</a>
+					</h3>
 					<p class="hotel-type">Мотель</p>
 					<p class="hotel-price">от 3000р.</p>
-					<a class="bottom-info" href="info.html">Подробнее</a>
+					<a class="hotel-more-info" href="info.html">Подробнее</a>
 					<button class="hotel-btn-booking" type="button">Забронировать</button>
 					<p class="rating">Рейтинг: 8.9</p>
-					<p class="star-rating" tabindex="0" aria-label="hotel rating"></p>
+					<p class="star-rating" tabindex="0" aria-label="hotel rating">
+						<span class="star-item"></span>
+					</p>
 				</li>
 				<!-- 3-й -->
 				<li class="hotel-item">
 					<p class="hotel-img">
 						<img src="img/hotel3.jpg" alt="Villas at Poco Diablo">
 					</p>
-					<a href="#" class="hotel-name">Villas at Poco Diablo</a>
+					<h3>
+						<a href="#" class="hotel-name">Villas at Poco Diablo</a>	
+					</h3>
 					<p class="hotel-type">Апартаменты</p>
 					<p class="hotel-price">от 2000р.</p>
-					<a class="bottom-info" href="info.html">Подробнее</a>
+					<a class="hotel-more-info" href="info.html">Подробнее</a>
 					<button class="hotel-btn-booking" type="button">Забронировать</button>
 					<p class="rating">Рейтинг: 9.2</p>
-					<p class="star-rating" tabindex="0" aria-label="hotel rating"></p>
+					<p class="star-rating" tabindex="0" aria-label="hotel rating">
+						<span class="star-item"></span>
+					</p>
 				</li>
 			</ul>				
 		</section>
@@ -169,7 +181,7 @@
 		<div class="footer-copyright">
 			<span class="website">Website by</span>
 			<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo" aria-label="Website HTML Academy">
-				<img src="img/logo-htmlacademy.svg" alt="HTML-Academy">
+				<img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML-Academy">
 			</a>
 		</div>
 	</footer>

@@ -12,7 +12,7 @@
 	<header class="main-header">
 		<nav class="main-menu">
 			<a href="index.html" class="main-logo">
-				<img src="img/main-logo.png" alt="City of Sedona">
+				<img src="img/main-logo.png" width="138" height="70" alt="City of Sedona">
 			</a>
 			<ul class="navigation">
 				<li class="navigation-item">
@@ -33,7 +33,7 @@
 	<!-- Банер -->
 	<main class="container">
 		<!-- Тут будет картинка -->
-		<div class="main-image">	
+		<div class="promo">	
 				<img src="img/background-image.jpg" width="1200" height="773" alt="sedona">
 		</div>
 		<!-- Описание города -->
@@ -77,17 +77,17 @@
 					<img src="img/canyon.jpg" width="800" height="256" alt="canyon">
 				</li>
 		<!-- Достопримечательности каньона -->
-				<li class="reasons-items">
+				<li class="reasons-item last-reasons">
 					<h3 class="reasons-name">Небольшая площадь</h3>
 					<p class="reasons-number">-№3-</p>
 					<p class="reasons-text">Все достопримечательности находятся близко</p>
 				</li>
-				<li class="reasons-items">
+				<li class="reasons-item last-reasons">
 					<h3 class="reasons-name">Красивая дорога</h3>
 					<p class="reasons-number">-№4-</p>
 					<p class="reasons-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 				</li>
-				<li class="reasons-items">
+				<li class="reasons-item last-reasons">
 					<h3 class="reasons-name">Мало туристов</h3>
 					<p class="reasons-number">-№5-</p>
 					<p class="reasons-text">Большинство едет в Гранд Каньон и толпится там</p>
@@ -102,28 +102,29 @@
 		</section>
 		<!-- Форма Поиска -->
 		<section class="hotels-search">
+			<h2>Форма поиска отеля</h2>
 			<form class="hotels-search-form" action="https://echo.htmlacademy.ru" method="post">
 				<p class="hotels-search-item">
-					<label class="hotels-date" for="arrival-date">Дата заезда:</label>
+					<label for="arrival-date">Дата заезда:</label>
 					<input class="date-input" id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
-					<button class="calendar" aria-label="Календарь"></button>
+					<button class="calendar" type="button" aria-label="Календарь"></button>
 				</p>
 				<p class="hotels-search-item">
-					<label class="hotels-date" for="departure-date">Дата выезда:</label>
+					<label for="departure-date">Дата выезда:</label>
 					<input class="date-input" id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
 					<button class="calendar" aria-label="Календарь" type="button"></button>
 				</p>
 				<p class="hotels-search-item">
-					<label class="hotels-form" for="people-btn">Взрослые:</label>
-					<button id="people-btn" class="people-btn adults-minus" type="button"></button>
-					<input type="text" class="adults" placeholder="2">
+					<label for="people-btn">Взрослые:</label>
+					<button id="people-btn" class="people-btn count-minus" type="button"></button>
+					<input type="text" class="count-input" placeholder="2">
 					<!-- <span class="adults">2</span> -->
-					<button class="people-btn adults-plus" type="button"></button>
-					<label class="hotels-form" for="people-btn">Дети:</label>
-					<button class="people-btn adults-minus" type="button"></button>
-					<input type="text" class="children" placeholder="0">
+					<button class="people-btn count-plus" type="button"></button>
+					<label for="people-btn">Дети:</label>
+					<button class="people-btn count-minus" type="button"></button>
+					<input type="text" class="count-input" placeholder="0">
 					<!-- <span class="children">0</span> -->
-					<button class="people-btn adults-plus" type="button"></button>
+					<button class="people-btn count-plus" type="button"></button>
 				</p>
 				<button class="find-btn" type="submit">Найти</button>
 			</form>	
@@ -137,28 +138,32 @@
 	<footer class="main-footer">
 		<!-- Контакты -->
 		<h2 class="visually-hidden">Контакты</h2>
-		<div class="footer-hashtag">
-			<p class="hashtag">#Visitsedona</p>
-		</div>
-		<div class="footer-social">
-			<ul class="social">
-				<li class="social-item">
-					<a href="https://www.google.ru/" class="twitter" aria-label="twitter"></a>
-				</li>
-				<li class="social-item">
-					<a href="https://www.google.ru/" class="facebook" aria-label="facebook"></a>
-				</li>
-				<li class="social-item">
-					<a href="https://www.google.ru/" class="youtube" aria-label="youtube"></a>
-				</li>
-			</ul>
-		</div>
-		<div class="footer-copyright">
-			<span class="website">Website by</span>
-			<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo" aria-label="Website HTML Academy">
-				<img src="img/logo-htmlacademy.svg" alt="HTML-Academy">
-			</a>
-		</div>
+		<!-- <div class="footer-wraper"> -->
+			<div class="footer-hashtag">
+				<p class="hashtag">#Visitsedona</p>
+			</div>
+			<div class="footer-social">
+				<ul class="social">
+					<li class="social-item">
+						<a href="https://www.google.ru/" class="twitter" aria-label="twitter"></a>
+					</li>
+					<li class="social-item">
+						<a href="https://www.google.ru/" class="facebook" aria-label="facebook"></a>
+					</li>
+					<li class="social-item">
+						<a href="https://www.google.ru/" class="youtube" aria-label="youtube"></a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-copyright">
+				<!-- <div class="copyrigth-wraper"> -->
+					<span class="website">Website by</span>
+					<a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo" aria-label="Website HTML Academy">
+						<img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML-Academy">
+					</a>
+				<!-- </div> -->
+			</div>
+		<!-- </div> -->
 	</footer>
     <!-- <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p> -->
   </body>
