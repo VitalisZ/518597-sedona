@@ -31,7 +31,7 @@
 				</ul>
 			</nav>
 		</header>
-		<main class="container conteiner-styles">
+		<main class="container container-hotels">
 			<!-- Форма выбора -->
 			<section class="hotels-filter">
 				<h2 class="visually-hidden">Фильтр отелей</h2>
@@ -71,38 +71,21 @@
 						</ul>
 					</fieldset>
 					<fieldset class="filter-form-group">
-						<legend class="price-of-day">Стоимость в сутки(Р)</legend>
-						<p class="filter-price">
-							от
-							<span class="filter-price-item">0</span>
-							до
-							<span class="filter-price-item">3000</span>
-						</p>
-						<div class="price-controls">
-       						<label class="min-price">от <input type="text" name="min-price" value="0">
-       						</label>
-        					<label class="max-price">до <input type="text" name="max-price" value="3000">
-        					</label>
-      					</div>
-		      			<input type="range" name="filter-price">
-<!-- 111111 -->
-		      			<!-- <div class="filter-range-title">Стоимость в сутки (р):</div>
-      					<div class="price-controls">
-        					<label class="min-price">от <input type="text" name="min-price" value="0">
-        					</label>
-        					<label class="max-price">до <input type="text" name="max-price" value="3000">
-        					</label>
-      					</div>
-      					<div class="range-controls">
-        					<div class="scale">
-          						<div class="bar"></div>
-        					</div>
-        					<div class="range-toggle range-toggle-min"></div>
-        					<div class="range-toggle range-toggle-max"></div>
-      					</div> -->
+						<div class="price-of-day">Стоимость в сутки (р):</div>
+							<div class="price-controls">
+        						<label class="min-price">от <input type="text" name="min-price" value="0"></label>
+        						<label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+      						</div>
+      						<div class="range-controls">
+        						<div class="scale">
+          							<div class="bar"></div>
+       						 	</div>
+        						<div class="range-toggle range-toggle-min"></div>
+        						<div class="range-toggle range-toggle-max"></div>
+     						</div>
+      					<button class="filter-btn" type="submit">Показать</button>
 					</fieldset>
-					<!-- <button class="btn-transparent" type="submit">Показать</button> -->
-					<button class="filter-btn" type="submit">Показать</button>
+					
 				</form>
 			</section>
 			<!-- Сортировка -->
@@ -138,20 +121,21 @@
 				<ul class="hotels-list">
 					<li class="hotel-item">
 						<p class="hotel-img">	
-							<img src="img/hotel1.jpg" alt="Amara Resort & SPA">
+							<img src="img/hotel1.jpg" width="135" height="90" alt="Amara Resort & SPA">
 						</p>
 						<div class="hotel-item-wraper">
-							<div class="content-wraper">
-								<div class="content-item-wraper">
+							<div class="hotel-content-wraper">
+								<!-- <div class="content-item-wraper"> -->
 									<h3>
 										<a href="#" class="hotel-name">Amara Resort & SPA</a>
 									</h3>
 									<span class="hotel-type">Гостиница</span>
 									<span class="hotel-price">от 4000р.</span>
-								</div>
-								<div class="content-rating-wraper">
+								<!-- </div> -->
+								
 									<!-- <p class="hotel-type">Гостиница</p>
 									<p class="hotel-price">от 4000р.</p> -->
+								<div class="content-buttons-wraper">
 									<a class="hotel-more-info" href="info.html">Подробнее</a>
 									<button class="hotel-btn-booking" type="button">Забронировать</button>
 								</div>
@@ -170,58 +154,66 @@
 					<!-- 2-ой -->
 					<li class="hotel-item">
 						<p class="hotel-img">
-							<img src="img/hotel2.jpg" alt="Desert Quail Inn">
+							<img src="img/hotel2.jpg" width="135" height="90" alt="Desert Quail Inn">
 						</p>
 						<div class="hotel-item-wraper">
-							<div class="content-wraper">
-								<div class="content-item-wraper">
+							<div class="hotel-content-wraper">
+								<!-- <div class="content-item-wraper"> -->
 									<h3>
-										<a href="#" class="hotel-name">Desert Quail Inn</a>
+										<a href="#" class="hotel-name">Desert quail inn</a>
 									</h3>
 									<span class="hotel-type">Мотель</span>
 									<span class="hotel-price">от 3000р.</span>
-								</div>
-								<div class="content-rating-wraper">
+								<!-- </div> -->
+								
+									<!-- <p class="hotel-type">Гостиница</p>
+									<p class="hotel-price">от 4000р.</p> -->
+								<div class="content-buttons-wraper">
 									<a class="hotel-more-info" href="info.html">Подробнее</a>
 									<button class="hotel-btn-booking" type="button">Забронировать</button>
 								</div>
 							</div>
 							<div class="rating-wraper">
-									<p class="star-rating" tabindex="0" aria-label="this hotel has three stars">
-										<span class="star-item"></span>
-										<span class="star-item"></span>
-										<span class="star-item"></span>
-									</p>
-									<p class="rating">Рейтинг: 8.9</p>
+								<p class="star-rating" tabindex="0" aria-label="this hotel has four stars">
+									<span class="star-item"></span>
+									<span class="star-item"></span>
+									<span class="star-item"></span>
+									<span class="star-item"></span>
+								</p>
+								<p class="rating">Рейтинг: 8.5</p>
 							</div>
 						</div>
 					</li>
 					<!-- 3-й -->
 					<li class="hotel-item">
 						<p class="hotel-img">
-							<img src="img/hotel3.jpg" alt="Villas at Poco Diablo">
+							<img src="img/hotel3.jpg" width="135" height="90" alt="Villas at Poco Diablo">
 						</p>
 						<div class="hotel-item-wraper">
-							<div class="content-wraper">
-								<div class="content-item-wraper">
+							<div class="hotel-content-wraper">
+								<!-- <div class="content-item-wraper"> -->
 									<h3>
-										<a href="#" class="hotel-name">Villas at Poco Diablo</a>	
+										<a href="#" class="hotel-name">Villas at poco diablo</a>
 									</h3>
 									<span class="hotel-type">Апартаменты</span>
 									<span class="hotel-price">от 2000р.</span>
-								</div>
-								<div class="content-rating-wraper">
+								<!-- </div> -->
+								
+									<!-- <p class="hotel-type">Гостиница</p>
+									<p class="hotel-price">от 4000р.</p> -->
+								<div class="content-buttons-wraper">
 									<a class="hotel-more-info" href="info.html">Подробнее</a>
 									<button class="hotel-btn-booking" type="button">Забронировать</button>
 								</div>
 							</div>
 							<div class="rating-wraper">
-									
-									<p class="star-rating" tabindex="0" aria-label="this hotel has two stars">
-										<span class="star-item"></span>
-										<span class="star-item"></span>
-									</p>
-									<p class="rating">Рейтинг: 9.2</p>
+								<p class="star-rating" tabindex="0" aria-label="this hotel has four stars">
+									<span class="star-item"></span>
+									<span class="star-item"></span>
+									<span class="star-item"></span>
+									<span class="star-item"></span>
+								</p>
+								<p class="rating">Рейтинг: 8.5</p>
 							</div>
 						</div>
 					</li>
