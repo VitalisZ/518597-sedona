@@ -1,4 +1,6 @@
 body {
+	position: relative;
+
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -9,8 +11,8 @@ body {
 	font-weight: bold;
 	/*color: #000;*/
 	text-transform: uppercase;
-
-	position: relative;
+	
+	background-color: rgb(242, 242, 242);
 }
 
 a {
@@ -33,6 +35,8 @@ ul {
 .main-wraper {
 	width: 1200px;
 	margin: 0 auto;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 0 10px rgba(0,0,0,0.5)
 }
 
 .main-logo {
@@ -111,7 +115,16 @@ ul {
 }
 
 /*main*/
-.container{
+.container-index{
+	position: relative;
+
+	background-color: #fff;
+	text-align: center;
+/*	margin: 0 auto;*/
+}
+
+/*main-hotels*/
+.container-hotels{
 	background-color: #fff;
 	text-align: center;
 /*	margin: 0 auto;*/
@@ -185,7 +198,7 @@ ul {
 .reasons-item {
 	box-sizing: border-box;
 	width: 33.3%;
-	padding: 20px;
+	/*padding: 50px 65px;*/
 
 	background-color: rgb(129,179,210);
 
@@ -199,7 +212,20 @@ ul {
 	width: 66.6%;
 }
 
+.reasons-img img {
+	display: block;
+}
+
+.reasons-img-canyon img {
+	display: block;
+}
+
+.reasons-img-canyon {
+	order: -1;
+}
 .last-reasons{
+	padding: 50px 65px 70px 70px;
+
 	text-align: inherit;
 	background-color: rgb(238,238,238);
 	font-size: 21px;
@@ -214,13 +240,13 @@ ul {
 .reasons-name{
 	font-size: 21px;
 	font-weight: bold;
-	margin: 0;
+	margin-top: 50px;
 }
 
 .reasons-number,
 .reasons-text {
 	font-size: 14px;
-	margin: 0;
+	margin-top: 30px;
 }
 
 .features-item {
@@ -228,7 +254,7 @@ ul {
 	font-size: 21px;
 	line-height: 21px;
 	text-align: center;
-	padding: 0;
+	padding: 60px 90px 75px 75px;
 	margin: 0;
 	align-self: center;
 }
@@ -275,7 +301,7 @@ ul {
 /*Поиск гостиницы в Седоне*/
 
 .booking {
-
+	position: relative;
 }
 
 .booking-interesting {
@@ -344,10 +370,16 @@ ul {
 
 
 .hotels-search {
+	position: absolute;
+
+	transform: translateX(-50%);
 	display: inline-block;
 	padding: 54px;
 	vertical-align: middle;
-	border: 1px solid black;
+
+	background-color: rgb(255, 255, 255);
+
+	/*border: 1px solid black;*/
 }
 
 .find-btn {
@@ -378,12 +410,15 @@ ul {
 /*форма поиска*/
 .hotels-search-item {
 	position: relative;
+	margin-bottom: 30px;
+	margin-top: 0;
 }
 
 .hotels-search-form {
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
+	padding: 0;
 
 }
 
@@ -391,6 +426,7 @@ ul {
 	box-sizing: border-box;
 	margin-left: 17px;
 	padding: 6px 0;
+	padding-left: 20px;
 	padding-right: 35px;
 
 	font-size: 14px;
@@ -403,17 +439,36 @@ ul {
 	border: none;
 }
 
+/*.count-search-form label:first-of-type {
+	margin-left: 30px;
+}*/
+
+.count-search-form label:nth-of-type(2) {
+	margin-left: 50px;
+}
+
+/*.count-search-form button:nth-of-type(2) {
+	margin-right: 65px;
+}*/
+
 .count-search-form {
 	width: 458px;
 
+	margin-bottom: 55px;
+	font-size: 0;
 }
 
+.count-search-form label {
+	font-size: 14px;
+	vertical-align: middle;
+}
 .count-input {
 	padding: 11px 0px;
 	width: 38px;
 	vertical-align: middle;
 	text-align: center;
-	
+	font-size: 14px;
+
 	background-color: rgb(242,242,242);
 	border: none;
 }
@@ -425,6 +480,8 @@ ul {
 	width: 38px;
 	vertical-align: middle;
 	/*height: 38px;*/
+
+
 }
 
 .count-minus {
@@ -453,13 +510,21 @@ ul {
 	margin: auto;
 	width: 100%;
 
-/*	position: absolute;
+	position: absolute;
 	bottom: 0;
 	left: 50%;
-	transform: translateX(-50%);*/
+	transform: translateX(-50%);
 	background: rgba(255, 255, 255, 0.5);
 
 
+}
+
+.main-footer-hotels {
+	display: flex;
+	min-height: 112px;
+	max-width: 1200px;
+	margin: auto;
+	width: 100%;
 }
 
 .footer-hashtag {
@@ -561,7 +626,7 @@ ul {
 }
 
 .filter-form-group {
-	/*list-style: none;*/
+	margin-top: 30px;
 	padding-right: 0;
 	margin-right: 0;
 	border: none;
@@ -607,6 +672,68 @@ ul {
 	cursor: pointer;
 
 
+}
+/* Фильтр */
+
+
+.check-item:not(checked) {
+	position: absolute;
+	opacity: 0;
+
+}
+.check-item:not(checked) + label {
+	position: relative; 
+	padding: 0 0 0 15px;
+}
+
+.check-item:not(checked) + label:before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -20px;
+	width: 27px;
+	height: 27px; 
+	background-image: url(../img/checkbox-off.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.check-item:checked + label:before {
+	content: '';
+	position: absolute;
+	top: -5px;
+  	left: -18px;
+	width: 27px;
+  	height: 27px; 
+	background-image: url(../img/checkbox-on.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.check-item:focus + label:before {
+	/*border: 1px solid rgba(242, 242, 242, 0.5);*/
+	box-shadow: 0 0 0 2px rgba(129, 179, 210, 0.5);
+}
+
+/*111111111*/
+
+
+.checkbox-indicator {
+
+}
+/*1111111111*/
+.comfort-item {
+	position: relative;
+	padding-left: 20px;
+	cursor: pointer;
+	margin-bottom: 23px;
+}
+
+.hotels-type-item {
+	position: relative;
+	padding-left: 20px;
+	cursor: pointer;
+	margin-bottom: 23px;
 }
 
 /* Сложный фильтр */
@@ -727,7 +854,11 @@ ul {
 .comfort,
 .hotels-type {
 	list-style: none;
+	padding-top: 25px;
+	/*margin-top: 20px;*/
 }
+
+
 
 .comfort-item,
 .hotels-type-item label {
@@ -740,6 +871,7 @@ ul {
 .comfort-check {
 	font-size: 14px;
 	line-height: 26px;
+
 }
 
 
@@ -886,6 +1018,7 @@ ul {
 
 .star-item {
 	display: inline-block;
+	text-align: right;
 	background-image: url("../img/star.svg");
 	background-repeat: no-repeat;
 	color: rgb(129,179,210);
@@ -997,7 +1130,7 @@ ul {
 }
 
 .rating-wraper {
-	align-self: flex-end;
+	/*align-self: flex-end;*/
 	margin-left: 385px;
 }
 

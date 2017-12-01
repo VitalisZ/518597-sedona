@@ -32,10 +32,10 @@
 			</nav>
 		</header>
 		<!-- Банер -->
-		<main class="container">
+		<main class="container-index">
 			<!-- Тут будет картинка -->
 			<div class="promo">	
-				<img src="img/background-image.jpg" width="1200" height="773" alt="sedona">
+				<img src="img/background-image-1.jpg" width="1200" height="563" alt="sedona">
 			</div>
 			<div class="reasons-intro">
 				<h3 class="reasons-city">Седона- небольшой городок в Аризоне, заслуживающий большего</h3>
@@ -75,27 +75,27 @@
 			<!-- Мост -->
 				<div class="reasons-list-wraper">
 					<ul class="reasons-list">
-						<li class="reasons-item">
+						<li class="reasons-item reasons-item-canyon">
 							<h3 class="reasons-name">Мост дьявола</h3>
 							<p class="reasons-number">— №2 —</p>
 							<p class="reasons-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 						</li>
-						<li class="reasons-img">
+						<li class="reasons-img-canyon">
 							<img src="img/canyon.jpg" width="800" height="256" alt="canyon">
 						</li>
 				<!-- Достопримечательности каньона -->
 						<li class="reasons-item last-reasons">
-							<h3 class="reasons-name">Небольшая площадь</h3>
+							<h3 class="reasons-name">Небольшая<br>площадь</h3>
 							<p class="reasons-number">— №3 —</p>
 							<p class="reasons-text">Все достопримечательности находятся близко</p>
 						</li>
 						<li class="reasons-item last-reasons">
-							<h3 class="reasons-name">Красивая дорога</h3>
+							<h3 class="reasons-name">Красивая<br>дорога</h3>
 							<p class="reasons-number">-№4-</p>
 							<p class="reasons-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 						</li>
 						<li class="reasons-item last-reasons">
-							<h3 class="reasons-name">Мало туристов</h3>
+							<h3 class="reasons-name">Мало<br>туристов</h3>
 							<p class="reasons-number">-№5-</p>
 							<p class="reasons-text">Большинство едет в Гранд Каньон и толпится там</p>
 						</li>	
@@ -110,7 +110,7 @@
 			</section>
 			<!-- Форма Поиска -->
 			<section class="hotels-search">
-				<h2>Форма поиска отеля</h2>
+				<h2 class="visually-hidden">Форма поиска отеля</h2>
 				<form class="hotels-search-form" action="https://echo.htmlacademy.ru" method="post">
 					<p class="hotels-search-item">
 						<label for="arrival-date">Дата заезда:</label>
@@ -126,12 +126,10 @@
 						<label for="people-btn">Взрослые:</label>
 						<button id="people-btn" class="people-btn count-minus" type="button"></button>
 						<input type="text" class="count-input" placeholder="2">
-						<!-- <span class="adults">2</span> -->
 						<button class="people-btn count-plus" type="button"></button>
 						<label for="people-btn">Дети:</label>
 						<button class="people-btn count-minus" type="button"></button>
 						<input type="text" class="count-input" placeholder="0">
-						<!-- <span class="children">0</span> -->
 						<button class="people-btn count-plus" type="button"></button>
 					</p>
 					<button class="find-btn" type="submit">Найти</button>
