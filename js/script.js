@@ -6,10 +6,12 @@ var dataDeparture = popup.querySelector("[name=departure-date]");
 var form = popup.querySelector("form");
 
 
+		// form.classList.add("hide-modal");
+
 
 	link.addEventListener("click", function (evt) {
 		evt.preventDefault();
-		popup.classList.toggle("find-hotels");
+		popup.classList.toggle("hide-modal");
 		dataArrival.focus();
 	});
 
